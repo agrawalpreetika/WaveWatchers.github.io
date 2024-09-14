@@ -1,0 +1,221 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar styling */
+.navbar {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #1A374D; /* Deep Ocean Blue */
+    position:fixed;
+    z-index:100;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    margin-left:20px;
+    line-height:1.5;
+}
+
+.nav-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: #EAEAEA; /* Light Sand Beige */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FF6F61; /* Bright Coral */
+}
+
+/* Home Section */
+.home-section {
+    height: 100vh;
+    background: url('background-image.jpg') center center/cover no-repeat;
+    position: relative;
+}
+
+.home-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 55, 77, 0.7); /* Deep Ocean Blue Overlay */
+}
+
+.home-content {
+    position: relative;
+    z-index: 1;
+    color: #FFFFFF; /* White text */
+    padding:15px;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+.home-content h1 {
+    font-family: 'Poppins', sans-serif; /* Modern and Bold */
+    font-size: 35px; /* Larger font size for prominence */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Uppercase for a bold look */
+    letter-spacing: 2px; /* Spacing between letters for elegance */
+}
+
+.home-content p {
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+    font-size:20px; /* Slightly larger font size for readability */
+    color: #EAEAEA; /* Light Sand Beige for a softer look */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Team Section */
+.team-section {
+    padding: 40px;
+    background-color: #EAEAEA; /* Light Sand Beige */
+    text-align: center;
+}
+
+.team-section h2 {
+    color: #1A374D; /* Deep Ocean Blue */
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.member {
+    background: #FFFFFF; /* White background for team members */
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.member img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.member h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #1A374D; /* Deep Ocean Blue */
+}
+
+.member p {
+    color: #406882; /* Sea Green */
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Feedback Section */
+.feedback-section {
+    padding: 40px;
+    background-color: #1A374D; /* Deep Ocean Blue */
+    color: #FFFFFF; /* White text */
+    text-align: center;
+}
+
+.feedback-section h2 {
+    margin-bottom: 20px;
+    color: #EAEAEA; /* Light Sand Beige */
+}
+
+.feedback-section textarea {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #EAEAEA; /* Light Sand Beige */
+    color: #1A374D; /* Text color Deep Ocean Blue */
+}
+
+.feedback-section button {
+    padding: 10px 20px;
+    background-color: #43C6AC; /* Turquoise Blue */
+    color: #FFFFFF; /* White text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.feedback-section button:hover {
+    background-color: #FF6F61; /* Bright Coral for hover */
+    animation: bounce 1s;
+}
+
+/* Bounce animation for button */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #3A3A3A; /* Charcoal Gray */
+    color: #EAEAEA; /* Light Sand Beige */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
