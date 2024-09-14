@@ -1,0 +1,250 @@
+/* game.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e0f7fa;
+    /* background-image: url('');
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-position: center; */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body::before {
+    content: ""; /* Required for pseudo-elements */
+    background-image: url('https://lh4.googleusercontent.com/proxy/u_DitkywnL_NoxiuIkbGq74KqbOXL4nQ1NfF_1EiwmVFQD4u0gjd8yPXmlSABBFgzE8FLyMInFQszh72RWAWCjH5rz9Cya02HGgIflI9yt7SNhu-BfWOFr6Agh5jQaf4fRRx5nXqJtOoDVSyGMQNO8hkrcYE9aJ8AkOs6BYjlMAkSYxNITZdp8m5xgVWkhAtgN6DGH4'); /* Replace with your image path */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Adjust the background opacity */
+    position: absolute; /* Position it over the body */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind the content */
+}
+/* Navbar styling */
+.navbar {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15pxpx;
+    background-color: #1A374D; /* Deep Ocean Blue */
+    position:fixed;
+    top:0px;
+    z-index:100;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    margin-left:20px;
+    line-height:1.5;
+}
+
+.nav-links a:hover {
+    color: #FF6F61; /* Bright Coral */
+}
+
+
+.nav-links li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: #EAEAEA; /* Light Sand Beige */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%; /* Ensure the container takes the full width of the screen */
+    padding: 0 20px; /* Provide space on the sides of the container */
+    box-sizing: border-box; /* Ensure padding doesn't affect total width */
+     /* Optional: container background */
+}
+
+#gameCanvas {
+    border: 2px solid #00518f;
+    background-color: #ffffff;
+    width: 100%; /* Canvas takes full width of the container */
+    max-width: 800px; /* Maximum width for larger screens */
+    min-width: 300px; /* Minimum width for small screens */
+    max-height:400px;
+    min-height:300px;
+    margin: 0; /* No extra margin needed here */
+    box-sizing: border-box; /* Ensure padding and borders are included in width/height */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+/* UI Button Container */
+#ui {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    padding:10px;
+}
+
+/* UI Buttons */
+#ui button {
+    padding: 10px;
+    background-color: #00518f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    flex: 1 1 150px; /* Flex-grow and flex-shrink with a minimum width */
+    max-width: 180px; /* Limit button width */
+}
+
+/* Button Hover Effect */
+#ui button:hover {
+    background-color: #002b4d;
+}
+
+
+
+button {
+    margin-top:15px;
+    padding: 10px;
+    background-color: #00518f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%; /*ye extra hai*/
+}
+
+button:hover {
+    background-color: #002b4d;
+}
+
+#info-panel {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Modal Styles */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 1; /* Start hidden */
+    
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    animation: fadeIn 0.5s forwards; /* Apply fade-in animation */
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9); /* Optional: scale effect for extra smoothness */
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Countdown Timer Centered and Flashing */
+#countdown {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    font-weight: 30px;
+    color: #d32f2f;
+    animation: flash 1s infinite;
+}
+
+/* Flashing Effect */
+@keyframes flash {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* styles.css */
+/* Existing styles... */
+
+/* End-Game Message Styling */
+#end-game-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#end-game-message button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #00518f;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#end-game-message button:hover {
+    background-color: #002b4d;
+}
