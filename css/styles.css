@@ -135,6 +135,7 @@ html {
 }
 
 .team-section h2 {
+    font-size:35px;
     color: #1A374D; /* Deep Ocean Blue */
 }
 
@@ -265,7 +266,7 @@ footer p {
 }
 
 .info-header h2 {
-    font-size: 2.5em;
+    font-size: 35px;
     margin-bottom: 10px;
     color: #00293c;
 }
