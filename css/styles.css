@@ -47,6 +47,28 @@ html {
 .nav-links a:hover {
     color: #FF6F61; /* Bright Coral */
 }
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .nav-links a{
+      font-size:17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links a{
+      font-size:16px;
+    }
+}
+ @media (max-width: 350px){
+   .nav-links a{
+      font-size:15px;
+    }
+ }
+ @media (max-width: 200px){
+   .nav-links a{
+      font-size:14px;
+    }
+ }
 
 /* Home Section */
 .home-section {
