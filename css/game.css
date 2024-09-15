@@ -90,13 +90,15 @@ body::before {
     background-color: #ffffff;
     width: 100%; /* Canvas takes full width of the container */
     max-width: 800px; /* Maximum width for larger screens */
-    min-width: 300px; /* Minimum width for small screens */
-    max-height:400px;
-    min-height:300px;
+    min-width: 200px; /* Minimum width for small screens */
+    max-height:600px;
+    min-height:470px;
     margin: 0; /* No extra margin needed here */
+    margin-top:10px;
     box-sizing: border-box; /* Ensure padding and borders are included in width/height */
     height: auto; /* Maintain aspect ratio */
 }
+
 
 
 /* UI Button Container */
