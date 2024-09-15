@@ -91,13 +91,14 @@ body::before {
     width: 100%; /* Canvas takes full width of the container */
     max-width: 800px; /* Maximum width for larger screens */
     min-width: 200px; /* Minimum width for small screens */
-    max-height:600px;
-    min-height:470px;
+    max-height:450px;
+    min-height:400px;
     margin: 0; /* No extra margin needed here */
     margin-top:10px;
     box-sizing: border-box; /* Ensure padding and borders are included in width/height */
     height: auto; /* Maintain aspect ratio */
 }
+
 
 
 
@@ -164,21 +165,63 @@ button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    
     background-color: rgba(0, 0, 0, 0.5);
-    opacity: 1; /* Start hidden */
-    
+    opacity: 1;
 }
 
+/* Modal Content */
 .modal-content {
     background-color: #ffffff;
-    padding: 40px;
+    padding:30px; /* Reduced padding for smaller screens */
     border-radius: 8px;
     text-align: center;
-    width: 80%;
+    width: 80%; /* More flexible width */
     max-width: 500px;
-    animation: fadeIn 0.5s forwards; /* Apply fade-in animation */
+    max-height: 80vh; /* Maximum height relative to the viewport height */
+    overflow: scroll; /* Enable vertical scrolling if content exceeds modal height */
+    animation: fadeIn 0.5s forwards;
 }
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 85%; /* Make the modal content take more space on smaller screens */
+        padding: 22px; /* Adjust padding for smaller screens */
+        max-height: 80vh; /* Adjust height for smaller screens */
+        margin-top:40px;
+    }
+    .nav-links a{
+      font-size:17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 90%; /* Nearly full width on very small screens */
+        padding: 20px; /* Reduce padding further */
+        font-size: 14px; /* Adjust font size for readability */
+        max-height: 83vh; /* Reduce height even more for very small screens */
+        margin-top:80px;
+    }
+    .nav-links a{
+      font-size:16px;
+    }
+}
+ @media (max-width: 350px){
+   .modal-content {
+     margin-top:140px;
+   }
+   .nav-links a{
+      font-size:15px;
+    }
+ }
+ @media (max-width: 200px){
+   .modal-content {
+     margin-top:150px;
+   }
+   .nav-links a{
+      font-size:14px;
+    }
+ }
 
 /* Animation Keyframes */
 @keyframes fadeIn {
