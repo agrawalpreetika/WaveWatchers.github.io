@@ -168,6 +168,13 @@ html {
     color: #406882; /* Sea Green */
 }
 
+.team-members .member:nth-child(1) {
+    z-index:5 /* Example styling */
+}
+.team-members .member:nth-child(2) {
+    z-index:4; /* Example styling */
+}
+
 @keyframes slideInLeft {
     0% {
         transform: translateX(-100%);
