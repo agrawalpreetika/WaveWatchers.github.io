@@ -39,7 +39,7 @@ body::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 15pxpx;
+    padding: 10px 15px;
     background-color: #1A374D; /* Deep Ocean Blue */
     position:fixed;
     top:0px;
