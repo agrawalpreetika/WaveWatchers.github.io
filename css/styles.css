@@ -73,7 +73,7 @@ html {
 /* Home Section */
 .home-section {
     height: 100vh;
-    background:red;
+    background-color:red;
 /*     background-image: url("css/bg-image.jpeg");
     background-position: center;
     background-size: cover;
