@@ -74,10 +74,10 @@ html {
 .home-section {
     height: 100vh;
     background-image: url('css/bg-image.jpeg');
-/*     background-position: center;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    position: relative; */
+    position: relative;
 }
 
 
