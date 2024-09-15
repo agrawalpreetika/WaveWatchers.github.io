@@ -251,3 +251,97 @@ footer p {
     margin: 0;
     font-size: 14px;
 }
+
+/* Sea Level Explanation Section */
+.info-section {
+    padding: 50px;
+    background-color: #e0f7fa; 
+    color: #003d5c; 
+}
+
+.info-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.info-header h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #00293c;
+}
+
+.info-header p {
+    font-size: 1.2em;
+    color: #003d5c; 
+}
+
+.info-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    text-align: center;
+}
+
+.feature {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #00518f; /* Add a blue border for contrast */
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.feature img {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #00518f;
+}
+
+.feature p {
+    font-size: 1em;
+    color: #004466; 
+}
+
+/* Responsive Styling */
+@media (max-width: 1200px) {
+    .info-features {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .info-features {
+        grid-template-columns: repeat(1, 1fr); /* Change to 1 column for small screens */
+    }
+
+    .info-header h2 {
+        font-size: 2em;
+    }
+
+    .info-header p {
+        font-size: 1em;
+    }
+
+    .feature img {
+        max-width: 80px;
+    }
+
+    .feature h3 {
+        font-size: 1.3em;
+    }
+
+    .feature p {
+        font-size: 0.9em;
+    }
+}
+
