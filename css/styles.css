@@ -285,10 +285,16 @@ footer p {
 
 .feature {
     background: #ffffff;
+    padding: 0;
     border-radius: 12px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid #00518f; /* Add a blue border for contrast */
+    border: 2px solid #00518f;
+    overflow: hidden; /* Ensure content doesn't overflow */
+    min-height: 450px; /* Set a consistent height for all feature divs */
+    display: flex;
+    flex-direction: column; /* Stack image and content vertically */
+    justify-content: space-between; /* Ensure content stays within bounds */
 }
 
 .feature:hover {
@@ -298,7 +304,7 @@ footer p {
 
 .feature img {
     width: 100%; /* Ensure the image takes the full width of the box */
-    height: 60%; /* Maintain aspect ratio */
+    height:60%; /* Maintain aspect ratio */
     display: block;
 }
 .feature h3 {
