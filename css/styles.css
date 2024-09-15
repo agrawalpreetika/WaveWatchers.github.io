@@ -78,6 +78,7 @@ html {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    z-index:0;
 }
 
 
