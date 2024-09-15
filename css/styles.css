@@ -73,9 +73,13 @@ html {
 /* Home Section */
 .home-section {
     height: 100vh;
-    background-image:"bg-image.jpeg" center center/cover no-repeat;
+    background-image: url("bg-image.jpeg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
 }
+
 
 .home-section::before {
     content: '';
