@@ -148,13 +148,13 @@ html {
 }
 
 .member {
-    background: #FFFFFF; /* White background for team members */
+    background: #ffffff; /* White background for team members */
     border-radius: 8px;
 /*     width: 200px; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     opacity: 0;
-    display: flex;
-    flex-direction: column;
+/*     display: flex;
+    flex-direction: column; */
     align-items: center;
     text-align: center;
     overflow:hidden; /*  ye extra dala hai */
@@ -188,7 +188,7 @@ html {
   display: inline-block;
 }
 .member .social a:hover {
-  color: white;
+  color: #ffffff;
 }
 .member .social i {
   font-size: 18px;
