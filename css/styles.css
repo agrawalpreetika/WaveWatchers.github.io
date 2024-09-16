@@ -168,7 +168,7 @@ html {
   transition: 0.4s;
 }
 .member .member-info-content h4 {
-  color: var(--contrast-color);
+  color: white;
   font-weight: 700;
   margin-bottom: 4px;
   font-size: 16px;
@@ -189,7 +189,7 @@ html {
   display: inline-block;
 }
 .member .social a:hover {
-  color: var(--default-color);
+  color: white;
 }
 .member .social i {
   font-size: 18px;
