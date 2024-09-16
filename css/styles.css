@@ -157,7 +157,8 @@ html {
     flex-direction: column; */
     align-items: center;
     text-align: center;
-    overflow:hidden; /*  ye extra dala hai */
+    padding:0;
+    overflow:hidden;
 }
 .member .member-info {
   position: absolute;
